@@ -1,0 +1,44 @@
+// 自定义颜色
+$primary-color: #3B82F6; // 蓝色作为主色调
+$secondary-color: #10B981; // 绿色作为辅助色
+
+// 自定义 Tailwind 配置
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .transition-custom {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+// 基础样式
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+// 导航栏样式
+#navbar {
+  @apply transition-all duration-300;
+}
+
+// 动画类
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+// 数字动画
+.counter {
+  transition: all 2s ease-out;
+}
+    

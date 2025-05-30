@@ -1,0 +1,254 @@
+# 网站基本配置
+title: ProductHub
+description: "Your all-in-one solution for product management and collaboration"
+lang: en
+baseurl: ""
+url: "https://yourusername.github.io"
+
+# 导航配置
+navigation:
+  - name: Home
+    link: /
+  - name: Features
+    link: /features/
+  - name: About
+    link: /about/
+  - name: Blog
+    link: /blog/
+  - name: Contact
+    link: /contact/
+
+# 联系方式配置
+contact:
+  intro: "Have questions or want to learn more? Get in touch with our team."
+  title: "We're here to help"
+  description: "Fill out the form and our team will get back to you within 24 hours."
+  email: support@producthub.com
+  phone: "+1 (555) 123-4567"
+  address: "123 Product Street, San Francisco, CA 94107, USA"
+  cta_text: "Contact Us"
+  cta_link: /contact/
+
+# 社交媒体链接
+social:
+  github: https://github.com/yourusername
+  twitter: https://twitter.com/yourusername
+  linkedin: https://linkedin.com/company/yourcompany
+  instagram: https://instagram.com/yourusername
+
+# 法律链接
+legal:
+  - name: Privacy Policy
+    link: /privacy-policy/
+  - name: Terms of Service
+    link: /terms-of-service/
+
+# 首页配置
+hero:
+  tagline: "Revolutionary Product Management"
+  title: "Build better products, faster"
+  description: "ProductHub helps teams plan, build, and ship amazing products with powerful collaboration tools and intuitive workflows."
+  image: https://picsum.photos/id/180/800/600
+  cta_text: "Get Started"
+  cta_link: /features/
+  secondary_cta_text: "Watch Demo"
+  secondary_cta_link: "#"
+  companies_logos:
+    - url: https://picsum.photos/id/1005/100/100
+      name: Company 1
+    - url: https://picsum.photos/id/1012/100/100
+      name: Company 2
+    - url: https://picsum.photos/id/1027/100/100
+      name: Company 3
+    - url: https://picsum.photos/id/1074/100/100
+      name: Company 4
+  rating: "4.9/5"
+  reviews_count: "1,200+ reviews"
+
+# 特性配置
+features:
+  title: "Powerful features to build better products"
+  description: "Our platform comes with everything you need to manage your product lifecycle efficiently."
+  list:
+    - title: "Project Planning"
+      description: "Create detailed roadmaps, set milestones, and track progress with Gantt charts and timelines."
+      icon: "fa-tasks"
+      cta_text: "Learn more"
+      link: "#"
+    - title: "Team Collaboration"
+      description: "Bring your team together with real-time collaboration, comments, and file sharing."
+      icon: "fa-users"
+      cta_text: "Learn more"
+      link: "#"
+    - title: "Task Management"
+      description: "Assign tasks, set deadlines, and track completion with our intuitive task boards."
+      icon: "fa-check-square-o"
+      cta_text: "Learn more"
+      link: "#"
+    - title: "Analytics & Insights"
+      description: "Gain valuable insights with powerful analytics and reporting tools to make data-driven decisions."
+      icon: "fa-bar-chart"
+      cta_text: "Learn more"
+      link: "#"
+    - title: "Documentation"
+      description: "Centralize all your product documentation in one place for easy access and collaboration."
+      icon: "fa-file-text-o"
+      cta_text: "Learn more"
+      link: "#"
+    - title: "Integrations"
+      description: "Connect with your favorite tools and services to streamline your workflow."
+      icon: "fa-plug"
+      cta_text: "Learn more"
+      link: "#"
+
+# 如何工作配置
+how_it_works:
+  title: "How ProductHub works"
+  description: "Getting started with ProductHub is easy. Follow these simple steps to start building better products."
+  steps:
+    - title: "Sign Up"
+      description: "Create your account and choose the plan that best fits your needs."
+      image: https://picsum.photos/id/1/600/400
+    - title: "Set Up Your Project"
+      description: "Create a new project, add your team members, and define your product goals."
+      image: https://picsum.photos/id/20/600/400
+    - title: "Start Building"
+      description: "Use our powerful features to plan, track, and collaborate on your product."
+      image: https://picsum.photos/id/26/600/400
+
+# 推荐配置
+testimonials:
+  title: "What our customers say"
+  description: "Hear from some of the amazing teams using ProductHub to build their products."
+  list:
+    - quote: "ProductHub has transformed the way we manage our products. The collaboration features have made our team more efficient and productive."
+      name: "Sarah Johnson"
+      position: "Product Manager"
+      company: "TechCorp"
+      rating: 5
+      image: https://picsum.photos/id/1027/100/100
+    - quote: "We've tried several product management tools, but ProductHub is by far the most intuitive and feature-rich platform we've used."
+      name: "Michael Chen"
+      position: "CEO"
+      company: "Startup Inc."
+      rating: 5
+      image: https://picsum.photos/id/1012/100/100
+    - quote: "The analytics and reporting features in ProductHub have given us valuable insights that have helped us make better decisions for our product."
+      name: "Emily Rodriguez"
+      position: "Product Lead"
+      company: "Digital Solutions"
+      rating: 4
+      image: https://picsum.photos/id/1000/100/100
+
+# 行动号召配置
+cta:
+  title: "Ready to transform your product management?"
+  description: "Join thousands of teams already building better products with ProductHub. Start your free trial today."
+  primary_text: "Start Free Trial"
+  primary_link: "#"
+  secondary_text: "Schedule Demo"
+  secondary_link: "/contact/"
+
+# 博客配置
+blog:
+  title: "Latest from our blog"
+  description: "Stay updated with the latest trends and insights in product management."
+  cta_text: "View all posts"
+  cta_link: "/blog/"
+
+# 关于页面配置
+about:
+  intro: "We're on a mission to help teams build better products, faster."
+  cta_text: "Meet our team"
+  cta_link: "/about/#team"
+  image: https://picsum.photos/id/3/800/600
+  story_title: "Our journey to redefine product management"
+  story_paragraph1: "Founded in 2020, ProductHub was born out of frustration with existing product management tools. We saw teams struggling with complex interfaces, lack of collaboration features, and limited integrations."
+  story_paragraph2: "We set out to build a platform that would solve these problems - a tool that's intuitive, powerful, and designed specifically for product teams. Today, ProductHub is used by thousands of teams worldwide to build amazing products."
+  stats:
+    - value: 5000
+      label: "Happy Customers"
+    - value: 25000
+      label: "Projects Managed"
+    - value: 98
+      label: "Satisfaction Rate (%)"
+    - value: 42
+      label: "Countries Served"
+
+# 团队配置
+team:
+  title: "Meet our amazing team"
+  description: "We're a diverse group of passionate individuals working together to build the best product management platform."
+  members:
+    - name: "Alex Thompson"
+      position: "CEO & Founder"
+      description: "Former product lead at Google with 10+ years of experience in product management."
+      image: https://picsum.photos/id/1012/400/400
+      twitter: "#"
+      linkedin: "#"
+      github: "#"
+    - name: "Jessica Zhang"
+      position: "CTO"
+      description: "Software engineer with expertise in scalable systems and distributed computing."
+      image: https://picsum.photos/id/1000/400/400
+      twitter: "#"
+      linkedin: "#"
+      github: "#"
+    - name: "Marcus Wilson"
+      position: "Design Lead"
+      description: "UX designer with a passion for creating intuitive and beautiful user experiences."
+      image: https://picsum.photos/id/1025/400/400
+      twitter: "#"
+      linkedin: "#"
+      github: "#"
+    - name: "Sophia Kim"
+      position: "Marketing Director"
+      description: "Marketing strategist with experience in scaling B2B SaaS products."
+      image: https://picsum.photos/id/1005/400/400
+      twitter: "#"
+      linkedin: "#"
+      github: "#"
+
+# 价值观配置
+values:
+  title: "Our core values"
+  description: "These principles guide everything we do at ProductHub."
+  list:
+    - title: "Customer Obsession"
+      description: "We put our customers first in everything we do. Their success is our success."
+      icon: "fa-heart"
+    - title: "Innovation"
+      description: "We're constantly pushing the boundaries to create innovative solutions for our customers."
+      icon: "fa-lightbulb-o"
+    - title: "Collaboration"
+      description: "We believe in the power of teamwork and collaboration to achieve great things."
+      icon: "fa-handshake-o"
+    - title: "Excellence"
+      description: "We strive for excellence in everything we do, from our product to our customer service."
+      icon: "fa-trophy"
+    - title: "Transparency"
+      description: "We believe in being open and transparent with our customers, team, and stakeholders."
+      icon: "fa-eye"
+
+# Jekyll 配置
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 自定义 Tailwind 配置
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

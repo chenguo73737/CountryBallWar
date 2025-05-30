@@ -1,0 +1,60 @@
+<header class="bg-white shadow-md fixed w-full z-50 transition-all duration-300" id="navbar">
+  <div class="container mx-auto px-4 py-3">
+    <div class="flex justify-between items-center">
+      <a href="{{ '/' | relative_url }}" class="flex items-center space-x-2">
+        <i class="fa fa-cube text-2xl text-primary"></i>
+        <span class="text-xl font-bold">{{ site.title }}</span>
+      </a>
+      
+      <nav class="hidden md:flex space-x-8">
+        {% for item in site.data.navigation %}
+        <a href="{{ item.link | relative_url }}" class="font-medium text-gray-700 hover:text-primary transition-colors duration-200">{{ item.name }}</a>
+        {% endfor %}
+      </nav>
+      
+      <div class="flex items-center space-x-4">
+        <a href="{{ site.github.repository_url }}" target="_blank" class="hidden md:block text-gray-700 hover:text-primary transition-colors duration-200">
+          <i class="fa fa-github text-xl"></i>
+        </a>
+        <a href="{{ site.data.contact.cta_link | relative_url }}" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-md transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+          {{ site.data.contact.cta_text }}
+        </a>
+        <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+          <i class="fa fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+    <div class="container mx-auto px-4 py-3 space-y-3">
+      {% for item in site.data.navigation %}
+      <a href="{{ item.link | relative_url }}" class="block font-medium text-gray-700 hover:text-primary py-2 transition-colors duration-200">{{ item.name }}</a>
+      {% endfor %}
+      <a href="{{ site.github.repository_url }}" target="_blank" class="block text-gray-700 hover:text-primary py-2 transition-colors duration-200">
+        <i class="fa fa-github mr-2"></i> View on GitHub
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // 导航栏滚动效果
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('py-2', 'shadow-lg', 'bg-white/95', 'backdrop-blur-sm');
+      navbar.classList.remove('py-3', 'shadow-md', 'bg-white');
+    } else {
+      navbar.classList.add('py-3', 'shadow-md', 'bg-white');
+      navbar.classList.remove('py-2', 'shadow-lg', 'bg-white/95', 'backdrop-blur-sm');
+    }
+  });
+
+  // 移动端菜单切换
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+    
