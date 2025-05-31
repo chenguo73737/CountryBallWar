@@ -1,0 +1,267 @@
+---
+layout: default
+title: {{ site.title }}
+description: {{ site.description }}
+---
+
+<!-- Hero Section -->
+<section class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-primary/5 to-primary/10">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            {{ site.data.hero.tagline }}
+          </span>
+          <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-gray-900">
+            {{ site.data.hero.title }}
+          </h1>
+          <p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-600 mt-4 max-w-xl">
+            {{ site.data.hero.description }}
+          </p>
+        </div>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="{{ site.data.hero.cta_link | relative_url }}" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center">
+            <span>{{ site.data.hero.cta_text }}</span>
+            <i class="fa fa-arrow-right ml-2"></i>
+          </a>
+          <a href="{{ site.data.hero.secondary_cta_link | relative_url }}" class="bg-white hover:bg-gray-50 text-gray-800 px-8 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg flex items-center">
+            <i class="fa fa-play-circle-o mr-2 text-primary"></i>
+            <span>{{ site.data.hero.secondary_cta_text }}</span>
+          </a>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <div class="flex -space-x-2">
+            {% for logo in site.data.hero.companies_logos %}
+            <img src="{{ logo.url }}" alt="{{ logo.name }}" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+            {% endfor %}
+          </div>
+          <div>
+            <div class="flex items-center text-yellow-500 mb-1">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <span class="ml-2 text-gray-700 font-medium">{{ site.data.hero.rating }}</span>
+            </div>
+            <p class="text-sm text-gray-600">{{ site.data.hero.reviews_count }} reviews</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="relative">
+        <div class="absolute inset-0 bg-primary/20 rounded-2xl transform rotate-3 scale-95"></div>
+        <img src="{{ site.data.hero.image }}" alt="{{ site.title }} in action" class="relative z-10 rounded-2xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-xl z-20 transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+              <i class="fa fa-check text-xl"></i>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900">Deployed Successfully</p>
+              <p class="text-xs text-gray-500">Just now</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        Features
+      </span>
+      <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-900 mb-4">
+        {{ site.data.features.title }}
+      </h2>
+      <p class="text-gray-600 text-lg">
+        {{ site.data.features.description }}
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for feature in site.data.features.list %}
+      <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-gray-200">
+        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+          <i class="fa {{ feature.icon }} text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">
+          {{ feature.title }}
+        </h3>
+        <p class="text-gray-600 mb-6">
+          {{ feature.description }}
+        </p>
+        <a href="{{ feature.link | relative_url }}" class="text-primary font-medium flex items-center hover:underline">
+          <span>{{ feature.cta_text }}</span>
+          <i class="fa fa-arrow-right ml-2 text-sm"></i>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        How It Works
+      </span>
+      <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-900 mb-4">
+        {{ site.data.how_it_works.title }}
+      </h2>
+      <p class="text-gray-600 text-lg">
+        {{ site.data.how_it_works.description }}
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {% for step in site.data.how_it_works.steps %}
+      <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 relative">
+        <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+          {{ forloop.index }}
+        </div>
+        <div class="mt-4">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">
+            {{ step.title }}
+          </h3>
+          <p class="text-gray-600 mb-6">
+            {{ step.description }}
+          </p>
+          {% if step.image %}
+          <img src="{{ step.image }}" alt="{{ step.title }}" class="rounded-lg shadow-md w-full">
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        Testimonials
+      </span>
+      <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-900 mb-4">
+        {{ site.data.testimonials.title }}
+      </h2>
+      <p class="text-gray-600 text-lg">
+        {{ site.data.testimonials.description }}
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for testimonial in site.data.testimonials.list %}
+      <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+        <div class="flex items-center text-yellow-500 mb-4">
+          {% for i in (1..testimonial.rating) %}
+          <i class="fa fa-star"></i>
+          {% endfor %}
+          {% if testimonial.rating != 5 %}
+          {% assign remaining = 5 | minus: testimonial.rating %}
+          {% for i in (1..remaining) %}
+          <i class="fa fa-star-o"></i>
+          {% endfor %}
+          {% endif %}
+        </div>
+        <p class="text-gray-600 mb-6 italic">
+          "{{ testimonial.quote }}"
+        </p>
+        <div class="flex items-center">
+          <img src="{{ testimonial.image }}" alt="{{ testimonial.name }}" class="w-12 h-12 rounded-full object-cover mr-4">
+          <div>
+            <h4 class="font-bold text-gray-900">
+              {{ testimonial.name }}
+            </h4>
+            <p class="text-gray-500 text-sm">
+              {{ testimonial.position }}, {{ testimonial.company }}
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-primary text-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6">
+        {{ site.data.cta.title }}
+      </h2>
+      <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">
+        {{ site.data.cta.description }}
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="{{ site.data.cta.primary_link | relative_url }}" class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-medium">
+          {{ site.data.cta.primary_text }}
+        </a>
+        <a href="{{ site.data.cta.secondary_link | relative_url }}" class="bg-transparent hover:bg-white/10 text-white border border-white px-8 py-3 rounded-lg transition-all duration-200 font-medium">
+          {{ site.data.cta.secondary_text }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Section -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
+      <div>
+        <span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+          Latest Updates
+        </span>
+        <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-900">
+          {{ site.data.blog.title }}
+        </h2>
+      </div>
+      <a href="{{ site.data.blog.cta_link | relative_url }}" class="mt-4 md:mt-0 text-primary font-medium flex items-center hover:underline">
+        <span>{{ site.data.blog.cta_text }}</span>
+        <i class="fa fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for post in site.posts limit:3 %}
+      <article class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+        <a href="{{ post.url | relative_url }}" class="block">
+          <img src="{{ post.image }}" alt="{{ post.title }}" class="w-full h-56 object-cover">
+        </a>
+        <div class="p-6">
+          <div class="flex items-center text-gray-500 text-sm mb-3">
+            <span class="flex items-center"><i class="fa fa-calendar-o mr-2"></i> {{ post.date | date_to_string }}</span>
+            <span class="flex items-center ml-4"><i class="fa fa-user-o mr-2"></i> {{ post.author }}</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            <a href="{{ post.url | relative_url }}" class="hover:text-primary transition-colors duration-200">
+              {{ post.title }}
+            </a>
+          </h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">
+            {{ post.excerpt | strip_html | truncatewords: 20 }}
+          </p>
+          <a href="{{ post.url | relative_url }}" class="text-primary font-medium flex items-center hover:underline">
+            <span>Read More</span>
+            <i class="fa fa-arrow-right ml-2 text-sm"></i>
+          </a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+    
